@@ -4,7 +4,8 @@
   <%= submit_tag "Search" %>
 <% end %>
 
+<%= link_to 'Create New', new_story_path %>
 
 <% @stories.each do |story| %>
-  <h2><%= link_to story.title, rew_path( story ) %></h2>
+  <h2><%= link_to story.title, story_path( story ) %></h2>
 <% end %>
