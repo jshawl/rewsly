@@ -5,6 +5,7 @@
 <% end %>
 
 <%= link_to 'Create New', new_story_path %>
+<%= link_to 'Popular', stories_popular_path %>
 
 <% @stories.each do |story| %>
   <h2><%= link_to story.title, story_path( story ) %></h2>

@@ -25,6 +25,11 @@ class StoriesController < ApplicationController
     end
   end
 
+  def popular
+    @stories = Story.popular
+    render :index
+  end
+
   private
 
   def story_params

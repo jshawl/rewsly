@@ -4,6 +4,7 @@ Rewsly::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'stories#index'
+  get 'stories/popular' => 'stories#popular'
   resources :stories
 
   # Example of regular route:
