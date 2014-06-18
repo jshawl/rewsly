@@ -1,7 +1,11 @@
 class RewsController < ApplicationController
 
   def index
-    @stories = Story.all
+    if params[:q]
+      @stories = Story.search_for( params[:q] ) 
+    else
+      @stories = Story.all
+    end
   end
 
   def show
